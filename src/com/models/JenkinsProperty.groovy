@@ -1,18 +1,14 @@
 package com.models
 
+import com.models.Project
+import com.models.ProjectInfo
 
 class ConfigurationTool {
     String build
     String path
 }
 
-class ProjectInfo {
-    String type
-    String language
-    String framework
-    String app_version
-    String app_name
-}
+
 
 class Credentials {
     String credentials_id
@@ -51,13 +47,6 @@ class Storage {
 
 class Service {
     List<ServicePort> ports
-}
-
-class Project {
-    ConfigurationTool configuration_tool
-    ProjectInfo project_info
-    Credentials credentials
-    RepositoryInfo repository_info
 }
 
 class Replicas {
