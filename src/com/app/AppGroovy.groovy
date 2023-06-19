@@ -23,4 +23,26 @@ class AppGroovy {
     static String saludo(String name){
         return 'hola mundo ' + name
     }
+
+    JenkinsProperty getProject(){
+        JenkinsProperty jenkinsProperty = new JenkinsProperty()
+        jenkinsProperty.project = new Project()
+        jenkinsProperty.project.project_info = new ProjectInfo()
+        jenkinsProperty.project.project_info.app_name = "hola mundo"
+        def objectMapper = new ObjectMapper()
+        def json = objectMapper.writeValueAsString(jenkinsProperty)
+        return jenkinsProperty
+    }
+
+    String getProjectString(){
+        JenkinsProperty jenkinsProperty = new JenkinsProperty()
+        jenkinsProperty.project = new Project()
+        jenkinsProperty.project.project_info = new ProjectInfo()
+        jenkinsProperty.project.project_info.app_name = "hola mundo"
+        def objectMapper = new ObjectMapper()
+        def json = objectMapper.writeValueAsString(jenkinsProperty)
+        return json
+    }
+
+
 }
